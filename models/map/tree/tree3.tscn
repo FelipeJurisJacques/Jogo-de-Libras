@@ -1,0 +1,34 @@
+[gd_scene load_steps=4 format=2]
+
+[sub_resource type="CapsuleShape" id=1]
+height = 8.0
+
+[sub_resource type="SpatialMaterial" id=2]
+albedo_color = Color( 0.372549, 0.270588, 0.160784, 1 )
+
+[sub_resource type="SpatialMaterial" id=3]
+albedo_color = Color( 0.47451, 0.509804, 0.137255, 1 )
+
+[node name="tree" type="RigidBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+mass = 20000.0
+axis_lock_angular_y = true
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-008, -1, 0, 1, -4.37114e-008, 0, 4, 0 )
+shape = SubResource( 1 )
+
+[node name="CSGPolygon4" type="CSGPolygon" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0 )
+polygon = PoolVector2Array( 0, 0, 0, 10, 0, 10, 1, 0 )
+mode = 1
+spin_degrees = 360.0
+spin_sides = 5
+material = SubResource( 2 )
+
+[node name="CSGSphere" type="CSGSphere" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.37903, 0 )
+radius = 5.0
+radial_segments = 5
+rings = 4
+material = SubResource( 3 )

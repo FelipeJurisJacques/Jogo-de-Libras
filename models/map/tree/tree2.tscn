@@ -1,0 +1,57 @@
+[gd_scene load_steps=6 format=2]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_color = Color( 0.341176, 0.454902, 0.482353, 1 )
+
+[sub_resource type="SpatialMaterial" id=2]
+albedo_color = Color( 0.431373, 0.533333, 0.552941, 1 )
+
+[sub_resource type="SpatialMaterial" id=3]
+albedo_color = Color( 0.329412, 0.435294, 0.317647, 1 )
+
+[sub_resource type="CapsuleShape" id=4]
+height = 8.0
+
+[sub_resource type="SpatialMaterial" id=5]
+albedo_color = Color( 0.372549, 0.270588, 0.160784, 1 )
+
+[node name="tree" type="RigidBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+mass = 20000.0
+axis_lock_angular_y = true
+
+[node name="CSGPolygon" type="CSGPolygon" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.4067, 0 )
+polygon = PoolVector2Array( 0, 0, 0, 2, 0, 4, 2, 0 )
+mode = 1
+spin_degrees = 360.0
+spin_sides = 3
+material = SubResource( 1 )
+
+[node name="CSGPolygon2" type="CSGPolygon" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.47699, 0 )
+polygon = PoolVector2Array( 0, 0, 0, 4, 2, 0, 2, 0 )
+mode = 1
+spin_degrees = 360.0
+spin_sides = 4
+material = SubResource( 2 )
+
+[node name="CSGPolygon3" type="CSGPolygon" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.46982, 0 )
+polygon = PoolVector2Array( 0, 0, 0, 5, 3, 0, 1, 0 )
+mode = 1
+spin_degrees = 360.0
+spin_sides = 8
+material = SubResource( 3 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-008, -1, 0, 1, -4.37114e-008, 0, 4, 0 )
+shape = SubResource( 4 )
+
+[node name="CSGPolygon4" type="CSGPolygon" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0 )
+polygon = PoolVector2Array( 0, 0, 0, 10, 0, 10, 1, 0 )
+mode = 1
+spin_degrees = 360.0
+spin_sides = 3
+material = SubResource( 5 )

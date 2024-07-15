@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://script/element.gd" type="Script" id=1]
+[ext_resource path="res://video/quimica/fluor.ogv" type="VideoStream" id=2]
+[ext_resource path="res://models/environment/point/solido/texture/Ca.bmp" type="Texture" id=3]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_texture = ExtResource( 3 )
+
+[node name="Ca" type="Spatial"]
+script = ExtResource( 1 )
+elemento = "Ca"
+clip = ExtResource( 2 )
+
+[node name="CSGBox" type="CSGBox" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
+width = 1.5
+height = 1.5
+depth = 1.5
+material = SubResource( 1 )

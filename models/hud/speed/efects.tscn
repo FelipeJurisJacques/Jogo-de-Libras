@@ -1,0 +1,438 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://models/hud/speed/p.tscn" type="PackedScene" id=1]
+[ext_resource path="res://models/hud/speed/b.tscn" type="PackedScene" id=2]
+[ext_resource path="res://models/hud/speed/q.tscn" type="PackedScene" id=3]
+
+[node name="efects" type="Spatial"]
+
+[node name="c" type="Spatial" parent="."]
+editor/display_folded = true
+
+[node name="a" type="Spatial" parent="c"]
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.17 )
+
+[node name="p" parent="c/a" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2, 0.17 )
+
+[node name="p2" parent="c/a" instance=ExtResource( 1 )]
+transform = Transform( -1, 8.74228e-008, 0, -8.74228e-008, -1, 0, 0, 0, 1, 0, 0.2, 0.17 )
+
+[node name="b" parent="c/a" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.01, -0.2, 0.17 )
+
+[node name="b2" parent="c/a" instance=ExtResource( 2 )]
+transform = Transform( -1, 8.74228e-008, 0, -8.74228e-008, -1, 0, 0, 0, 1, 0.01, 0.2, 0.17 )
+
+[node name="q" parent="c/a" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.01, -0.2, 0.17 )
+
+[node name="q2" parent="c/a" instance=ExtResource( 3 )]
+transform = Transform( -1, 8.74228e-008, 0, -8.74228e-008, -1, 0, 0, 0, 1, 0.01, 0.2, 0.17 )
+
+[node name="a2" type="Spatial" parent="c"]
+editor/display_folded = true
+transform = Transform( -4.37114e-008, -1, 0, 1, -4.37114e-008, 0, 0, 0, 1, 0, 0, -0.17 )
+
+[node name="p" parent="c/a2" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2, 0.17 )
+
+[node name="p2" parent="c/a2" instance=ExtResource( 1 )]
+transform = Transform( -1, 8.74228e-008, 0, -8.74228e-008, -1, 0, 0, 0, 1, 0, 0.2, 0.17 )
+
+[node name="b" parent="c/a2" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.01, -0.2, 0.17 )
+
+[node name="b2" parent="c/a2" instance=ExtResource( 2 )]
+transform = Transform( -1, 8.74228e-008, 0, -8.74228e-008, -1, 0, 0, 0, 1, 0.01, 0.2, 0.17 )
+
+[node name="q" parent="c/a2" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.01, -0.2, 0.17 )
+
+[node name="q2" parent="c/a2" instance=ExtResource( 3 )]
+transform = Transform( -1, 8.74228e-008, 0, -8.74228e-008, -1, 0, 0, 0, 1, 0.01, 0.2, 0.17 )
+
+[node name="c2" type="Spatial" parent="."]
+editor/display_folded = true
+transform = Transform( 0.984808, -0.173648, 0, 0.173648, 0.984808, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="a" type="Spatial" parent="c2"]
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.17 )
+
+[node name="p" parent="c2/a" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2, 0.17 )
+
+[node name="p2" parent="c2/a" instance=ExtResource( 1 )]
+transform = Transform( -1, 8.74228e-008, 0, -8.74228e-008, -1, 0, 0, 0, 1, 0, 0.2, 0.17 )
+
+[node name="b" parent="c2/a" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.01, -0.2, 0.17 )
+
+[node name="b2" parent="c2/a" instance=ExtResource( 2 )]
+transform = Transform( -1, 8.74228e-008, 0, -8.74228e-008, -1, 0, 0, 0, 1, 0.01, 0.2, 0.17 )
+
+[node name="q" parent="c2/a" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.01, -0.2, 0.17 )
+
+[node name="q2" parent="c2/a" instance=ExtResource( 3 )]
+transform = Transform( -1, 8.74228e-008, 0, -8.74228e-008, -1, 0, 0, 0, 1, 0.01, 0.2, 0.17 )
+
+[node name="a2" type="Spatial" parent="c2"]
+editor/display_folded = true
+transform = Transform( -4.37114e-008, -1, 0, 1, -4.37114e-008, 0, 0, 0, 1, 0, 0, -0.17 )
+
+[node name="p" parent="c2/a2" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2, 0.17 )
+
+[node name="p2" parent="c2/a2" instance=ExtResource( 1 )]
+transform = Transform( -1, 8.74228e-008, 0, -8.74228e-008, -1, 0, 0, 0, 1, 0, 0.2, 0.17 )
+
+[node name="b" parent="c2/a2" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.01, -0.2, 0.17 )
+
+[node name="b2" parent="c2/a2" instance=ExtResource( 2 )]
+transform = Transform( -1, 8.74228e-008, 0, -8.74228e-008, -1, 0, 0, 0, 1, 0.01, 0.2, 0.17 )
+
+[node name="q" parent="c2/a2" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.01, -0.2, 0.17 )
+
+[node name="q2" parent="c2/a2" instance=ExtResource( 3 )]
+transform = Transform( -1, 8.74228e-008, 0, -8.74228e-008, -1, 0, 0, 0, 1, 0.01, 0.2, 0.17 )
+
+[node name="c3" type="Spatial" parent="."]
+editor/display_folded = true
+transform = Transform( 0.939693, -0.34202, 0, 0.34202, 0.939693, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="a" type="Spatial" parent="c3"]
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.17 )
+
+[node name="p" parent="c3/a" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2, 0.17 )
+
+[node name="p2" parent="c3/a" instance=ExtResource( 1 )]
+transform = Transform( -1, 8.74228e-008, 0, -8.74228e-008, -1, 0, 0, 0, 1, 0, 0.2, 0.17 )
+
+[node name="b" parent="c3/a" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.01, -0.2, 0.17 )
+
+[node name="b2" parent="c3/a" instance=ExtResource( 2 )]
+transform = Transform( -1, 8.74228e-008, 0, -8.74228e-008, -1, 0, 0, 0, 1, 0.01, 0.2, 0.17 )
+
+[node name="q" parent="c3/a" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.01, -0.2, 0.17 )
+
+[node name="q2" parent="c3/a" instance=ExtResource( 3 )]
+transform = Transform( -1, 8.74228e-008, 0, -8.74228e-008, -1, 0, 0, 0, 1, 0.01, 0.2, 0.17 )
+
+[node name="a2" type="Spatial" parent="c3"]
+editor/display_folded = true
+transform = Transform( -4.37114e-008, -1, 0, 1, -4.37114e-008, 0, 0, 0, 1, 0, 0, -0.17 )
+
+[node name="p" parent="c3/a2" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2, 0.17 )
+
+[node name="p2" parent="c3/a2" instance=ExtResource( 1 )]
+transform = Transform( -1, 8.74228e-008, 0, -8.74228e-008, -1, 0, 0, 0, 1, 0, 0.2, 0.17 )
+
+[node name="b" parent="c3/a2" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.01, -0.2, 0.17 )
+
+[node name="b2" parent="c3/a2" instance=ExtResource( 2 )]
+transform = Transform( -1, 8.74228e-008, 0, -8.74228e-008, -1, 0, 0, 0, 1, 0.01, 0.2, 0.17 )
+
+[node name="q" parent="c3/a2" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.01, -0.2, 0.17 )
+
+[node name="q2" parent="c3/a2" instance=ExtResource( 3 )]
+transform = Transform( -1, 8.74228e-008, 0, -8.74228e-008, -1, 0, 0, 0, 1, 0.01, 0.2, 0.17 )
+
+[node name="c4" type="Spatial" parent="."]
+editor/display_folded = true
+transform = Transform( 0.866025, -0.5, 0, 0.5, 0.866025, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="a" type="Spatial" parent="c4"]
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.17 )
+
+[node name="p" parent="c4/a" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2, 0.17 )
+
+[node name="p2" parent="c4/a" instance=ExtResource( 1 )]
+transform = Transform( -1, 8.74228e-008, 0, -8.74228e-008, -1, 0, 0, 0, 1, 0, 0.2, 0.17 )
+
+[node name="b" parent="c4/a" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.01, -0.2, 0.17 )
+
+[node name="b2" parent="c4/a" instance=ExtResource( 2 )]
+transform = Transform( -1, 8.74228e-008, 0, -8.74228e-008, -1, 0, 0, 0, 1, 0.01, 0.2, 0.17 )
+
+[node name="q" parent="c4/a" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.01, -0.2, 0.17 )
+
+[node name="q2" parent="c4/a" instance=ExtResource( 3 )]
+transform = Transform( -1, 8.74228e-008, 0, -8.74228e-008, -1, 0, 0, 0, 1, 0.01, 0.2, 0.17 )
+
+[node name="a2" type="Spatial" parent="c4"]
+editor/display_folded = true
+transform = Transform( -4.37114e-008, -1, 0, 1, -4.37114e-008, 0, 0, 0, 1, 0, 0, -0.17 )
+
+[node name="p" parent="c4/a2" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2, 0.17 )
+
+[node name="p2" parent="c4/a2" instance=ExtResource( 1 )]
+transform = Transform( -1, 8.74228e-008, 0, -8.74228e-008, -1, 0, 0, 0, 1, 0, 0.2, 0.17 )
+
+[node name="b" parent="c4/a2" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.01, -0.2, 0.17 )
+
+[node name="b2" parent="c4/a2" instance=ExtResource( 2 )]
+transform = Transform( -1, 8.74228e-008, 0, -8.74228e-008, -1, 0, 0, 0, 1, 0.01, 0.2, 0.17 )
+
+[node name="q" parent="c4/a2" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.01, -0.2, 0.17 )
+
+[node name="q2" parent="c4/a2" instance=ExtResource( 3 )]
+transform = Transform( -1, 8.74228e-008, 0, -8.74228e-008, -1, 0, 0, 0, 1, 0.01, 0.2, 0.17 )
+
+[node name="c5" type="Spatial" parent="."]
+editor/display_folded = true
+transform = Transform( 0.766044, -0.642788, 0, 0.642788, 0.766044, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="a" type="Spatial" parent="c5"]
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.17 )
+
+[node name="p" parent="c5/a" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2, 0.17 )
+
+[node name="p2" parent="c5/a" instance=ExtResource( 1 )]
+transform = Transform( -1, 8.74228e-008, 0, -8.74228e-008, -1, 0, 0, 0, 1, 0, 0.2, 0.17 )
+
+[node name="b" parent="c5/a" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.01, -0.2, 0.17 )
+
+[node name="b2" parent="c5/a" instance=ExtResource( 2 )]
+transform = Transform( -1, 8.74228e-008, 0, -8.74228e-008, -1, 0, 0, 0, 1, 0.01, 0.2, 0.17 )
+
+[node name="q" parent="c5/a" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.01, -0.2, 0.17 )
+
+[node name="q2" parent="c5/a" instance=ExtResource( 3 )]
+transform = Transform( -1, 8.74228e-008, 0, -8.74228e-008, -1, 0, 0, 0, 1, 0.01, 0.2, 0.17 )
+
+[node name="a2" type="Spatial" parent="c5"]
+editor/display_folded = true
+transform = Transform( -4.37114e-008, -1, 0, 1, -4.37114e-008, 0, 0, 0, 1, 0, 0, -0.17 )
+
+[node name="p" parent="c5/a2" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2, 0.17 )
+
+[node name="p2" parent="c5/a2" instance=ExtResource( 1 )]
+transform = Transform( -1, 8.74228e-008, 0, -8.74228e-008, -1, 0, 0, 0, 1, 0, 0.2, 0.17 )
+
+[node name="b" parent="c5/a2" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.01, -0.2, 0.17 )
+
+[node name="b2" parent="c5/a2" instance=ExtResource( 2 )]
+transform = Transform( -1, 8.74228e-008, 0, -8.74228e-008, -1, 0, 0, 0, 1, 0.01, 0.2, 0.17 )
+
+[node name="q" parent="c5/a2" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.01, -0.2, 0.17 )
+
+[node name="q2" parent="c5/a2" instance=ExtResource( 3 )]
+transform = Transform( -1, 8.74228e-008, 0, -8.74228e-008, -1, 0, 0, 0, 1, 0.01, 0.2, 0.17 )
+
+[node name="c6" type="Spatial" parent="."]
+editor/display_folded = true
+transform = Transform( 0.642788, -0.766044, 0, 0.766044, 0.642788, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="a" type="Spatial" parent="c6"]
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.17 )
+
+[node name="p" parent="c6/a" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2, 0.17 )
+
+[node name="p2" parent="c6/a" instance=ExtResource( 1 )]
+transform = Transform( -1, 8.74228e-008, 0, -8.74228e-008, -1, 0, 0, 0, 1, 0, 0.2, 0.17 )
+
+[node name="b" parent="c6/a" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.01, -0.2, 0.17 )
+
+[node name="b2" parent="c6/a" instance=ExtResource( 2 )]
+transform = Transform( -1, 8.74228e-008, 0, -8.74228e-008, -1, 0, 0, 0, 1, 0.01, 0.2, 0.17 )
+
+[node name="q" parent="c6/a" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.01, -0.2, 0.17 )
+
+[node name="q2" parent="c6/a" instance=ExtResource( 3 )]
+transform = Transform( -1, 8.74228e-008, 0, -8.74228e-008, -1, 0, 0, 0, 1, 0.01, 0.2, 0.17 )
+
+[node name="a2" type="Spatial" parent="c6"]
+editor/display_folded = true
+transform = Transform( -4.37114e-008, -1, 0, 1, -4.37114e-008, 0, 0, 0, 1, 0, 0, -0.17 )
+
+[node name="p" parent="c6/a2" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2, 0.17 )
+
+[node name="p2" parent="c6/a2" instance=ExtResource( 1 )]
+transform = Transform( -1, 8.74228e-008, 0, -8.74228e-008, -1, 0, 0, 0, 1, 0, 0.2, 0.17 )
+
+[node name="b" parent="c6/a2" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.01, -0.2, 0.17 )
+
+[node name="b2" parent="c6/a2" instance=ExtResource( 2 )]
+transform = Transform( -1, 8.74228e-008, 0, -8.74228e-008, -1, 0, 0, 0, 1, 0.01, 0.2, 0.17 )
+
+[node name="q" parent="c6/a2" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.01, -0.2, 0.17 )
+
+[node name="q2" parent="c6/a2" instance=ExtResource( 3 )]
+transform = Transform( -1, 8.74228e-008, 0, -8.74228e-008, -1, 0, 0, 0, 1, 0.01, 0.2, 0.17 )
+
+[node name="c7" type="Spatial" parent="."]
+editor/display_folded = true
+transform = Transform( 0.5, -0.866025, 0, 0.866025, 0.5, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="a" type="Spatial" parent="c7"]
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.17 )
+
+[node name="p" parent="c7/a" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2, 0.17 )
+
+[node name="p2" parent="c7/a" instance=ExtResource( 1 )]
+transform = Transform( -1, 8.74228e-008, 0, -8.74228e-008, -1, 0, 0, 0, 1, 0, 0.2, 0.17 )
+
+[node name="b" parent="c7/a" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.01, -0.2, 0.17 )
+
+[node name="b2" parent="c7/a" instance=ExtResource( 2 )]
+transform = Transform( -1, 8.74228e-008, 0, -8.74228e-008, -1, 0, 0, 0, 1, 0.01, 0.2, 0.17 )
+
+[node name="q" parent="c7/a" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.01, -0.2, 0.17 )
+
+[node name="q2" parent="c7/a" instance=ExtResource( 3 )]
+transform = Transform( -1, 8.74228e-008, 0, -8.74228e-008, -1, 0, 0, 0, 1, 0.01, 0.2, 0.17 )
+
+[node name="a2" type="Spatial" parent="c7"]
+editor/display_folded = true
+transform = Transform( -4.37114e-008, -1, 0, 1, -4.37114e-008, 0, 0, 0, 1, 0, 0, -0.17 )
+
+[node name="p" parent="c7/a2" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2, 0.17 )
+
+[node name="p2" parent="c7/a2" instance=ExtResource( 1 )]
+transform = Transform( -1, 8.74228e-008, 0, -8.74228e-008, -1, 0, 0, 0, 1, 0, 0.2, 0.17 )
+
+[node name="b" parent="c7/a2" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.01, -0.2, 0.17 )
+
+[node name="b2" parent="c7/a2" instance=ExtResource( 2 )]
+transform = Transform( -1, 8.74228e-008, 0, -8.74228e-008, -1, 0, 0, 0, 1, 0.01, 0.2, 0.17 )
+
+[node name="q" parent="c7/a2" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.01, -0.2, 0.17 )
+
+[node name="q2" parent="c7/a2" instance=ExtResource( 3 )]
+transform = Transform( -1, 8.74228e-008, 0, -8.74228e-008, -1, 0, 0, 0, 1, 0.01, 0.2, 0.17 )
+
+[node name="c8" type="Spatial" parent="."]
+editor/display_folded = true
+transform = Transform( 0.34202, -0.939693, 0, 0.939693, 0.34202, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="a" type="Spatial" parent="c8"]
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.17 )
+
+[node name="p" parent="c8/a" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2, 0.17 )
+
+[node name="p2" parent="c8/a" instance=ExtResource( 1 )]
+transform = Transform( -1, 8.74228e-008, 0, -8.74228e-008, -1, 0, 0, 0, 1, 0, 0.2, 0.17 )
+
+[node name="b" parent="c8/a" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.01, -0.2, 0.17 )
+
+[node name="b2" parent="c8/a" instance=ExtResource( 2 )]
+transform = Transform( -1, 8.74228e-008, 0, -8.74228e-008, -1, 0, 0, 0, 1, 0.01, 0.2, 0.17 )
+
+[node name="q" parent="c8/a" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.01, -0.2, 0.17 )
+
+[node name="q2" parent="c8/a" instance=ExtResource( 3 )]
+transform = Transform( -1, 8.74228e-008, 0, -8.74228e-008, -1, 0, 0, 0, 1, 0.01, 0.2, 0.17 )
+
+[node name="a2" type="Spatial" parent="c8"]
+editor/display_folded = true
+transform = Transform( -4.37114e-008, -1, 0, 1, -4.37114e-008, 0, 0, 0, 1, 0, 0, -0.17 )
+
+[node name="p" parent="c8/a2" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2, 0.17 )
+
+[node name="p2" parent="c8/a2" instance=ExtResource( 1 )]
+transform = Transform( -1, 8.74228e-008, 0, -8.74228e-008, -1, 0, 0, 0, 1, 0, 0.2, 0.17 )
+
+[node name="b" parent="c8/a2" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.01, -0.2, 0.17 )
+
+[node name="b2" parent="c8/a2" instance=ExtResource( 2 )]
+transform = Transform( -1, 8.74228e-008, 0, -8.74228e-008, -1, 0, 0, 0, 1, 0.01, 0.2, 0.17 )
+
+[node name="q" parent="c8/a2" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.01, -0.2, 0.17 )
+
+[node name="q2" parent="c8/a2" instance=ExtResource( 3 )]
+transform = Transform( -1, 8.74228e-008, 0, -8.74228e-008, -1, 0, 0, 0, 1, 0.01, 0.2, 0.17 )
+
+[node name="c9" type="Spatial" parent="."]
+editor/display_folded = true
+transform = Transform( 0.173648, -0.984808, 0, 0.984808, 0.173648, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="a" type="Spatial" parent="c9"]
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.17 )
+
+[node name="p" parent="c9/a" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2, 0.17 )
+
+[node name="p2" parent="c9/a" instance=ExtResource( 1 )]
+transform = Transform( -1, 8.74228e-008, 0, -8.74228e-008, -1, 0, 0, 0, 1, 0, 0.2, 0.17 )
+
+[node name="b" parent="c9/a" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.01, -0.2, 0.17 )
+
+[node name="b2" parent="c9/a" instance=ExtResource( 2 )]
+transform = Transform( -1, 8.74228e-008, 0, -8.74228e-008, -1, 0, 0, 0, 1, 0.01, 0.2, 0.17 )
+
+[node name="q" parent="c9/a" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.01, -0.2, 0.17 )
+
+[node name="q2" parent="c9/a" instance=ExtResource( 3 )]
+transform = Transform( -1, 8.74228e-008, 0, -8.74228e-008, -1, 0, 0, 0, 1, 0.01, 0.2, 0.17 )
+
+[node name="a2" type="Spatial" parent="c9"]
+editor/display_folded = true
+transform = Transform( -4.37114e-008, -1, 0, 1, -4.37114e-008, 0, 0, 0, 1, 0, 0, -0.17 )
+
+[node name="p" parent="c9/a2" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2, 0.17 )
+
+[node name="p2" parent="c9/a2" instance=ExtResource( 1 )]
+transform = Transform( -1, 8.74228e-008, 0, -8.74228e-008, -1, 0, 0, 0, 1, 0, 0.2, 0.17 )
+
+[node name="b" parent="c9/a2" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.01, -0.2, 0.17 )
+
+[node name="b2" parent="c9/a2" instance=ExtResource( 2 )]
+transform = Transform( -1, 8.74228e-008, 0, -8.74228e-008, -1, 0, 0, 0, 1, 0.01, 0.2, 0.17 )
+
+[node name="q" parent="c9/a2" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.01, -0.2, 0.17 )
+
+[node name="q2" parent="c9/a2" instance=ExtResource( 3 )]
+transform = Transform( -1, 8.74228e-008, 0, -8.74228e-008, -1, 0, 0, 0, 1, 0.01, 0.2, 0.17 )

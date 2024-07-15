@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=2]
+
+[sub_resource type="Curve" id=1]
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0.4945 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=2]
+curve = SubResource( 1 )
+
+[sub_resource type="ParticlesMaterial" id=3]
+emission_shape = 2
+emission_box_extents = Vector3( 0.01, 0, 0 )
+gravity = Vector3( 0, 0, 0 )
+scale_curve = SubResource( 2 )
+
+[sub_resource type="SpatialMaterial" id=4]
+flags_transparent = true
+flags_unshaded = true
+albedo_color = Color( 1, 1, 1, 0.490196 )
+
+[sub_resource type="PrismMesh" id=5]
+material = SubResource( 4 )
+size = Vector3( 0.01, 0.2, 0 )
+
+[node name="q" type="Particles"]
+amount = 1
+lifetime = 1.5
+speed_scale = 3.0
+process_material = SubResource( 3 )
+draw_pass_1 = SubResource( 5 )

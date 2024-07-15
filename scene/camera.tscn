@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://script/camera.gd" type="Script" id=1]
+[ext_resource path="res://models/hud/arrow.obj" type="ArrayMesh" id=2]
+[ext_resource path="res://script/speed_efects.gd" type="Script" id=3]
+[ext_resource path="res://models/hud/speed/efects.tscn" type="PackedScene" id=4]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_color = Color( 0.356863, 0.533333, 1, 1 )
+
+[node name="camera" type="Spatial"]
+script = ExtResource( 1 )
+camera_path = NodePath("Camera")
+arrow_path = NodePath("Camera/target")
+efects = NodePath("Camera/sfx")
+target_distance = 7.0
+target_height = 3.0
+
+[node name="Camera" type="Camera" parent="."]
+current = true
+far = 300.0
+
+[node name="target" type="Spatial" parent="Camera"]
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -1 )
+
+[node name="arrow" type="MeshInstance" parent="Camera/target"]
+mesh = ExtResource( 2 )
+material/0 = SubResource( 1 )
+
+[node name="sfx" type="Spatial" parent="Camera"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.17 )
+script = ExtResource( 3 )
+efects = ExtResource( 4 )

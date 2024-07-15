@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_color = Color( 0.45098, 0.4, 0.337255, 1 )
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 5, 3, 5 )
+
+[node name="rock" type="RigidBody"]
+mass = 15000.0
+
+[node name="CSGSphere" type="CSGSphere" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.82581, 0 )
+radius = 5.0
+radial_segments = 5
+rings = 4
+material = SubResource( 1 )
+
+[node name="CSGSphere2" type="CSGSphere" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.06132, 1.18216, 0 )
+radius = 3.0
+radial_segments = 5
+rings = 4
+material = SubResource( 1 )
+
+[node name="CSGSphere3" type="CSGSphere" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.60996, 1.94629, 4.82817 )
+radius = 4.0
+radial_segments = 5
+rings = 4
+material = SubResource( 1 )
+
+[node name="CSGSphere4" type="CSGSphere" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.572804, 1.94629, 4.82817 )
+radius = 4.0
+radial_segments = 5
+rings = 4
+material = SubResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7664, 2.2813, 2.5122 )
+shape = SubResource( 2 )

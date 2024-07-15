@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_color = Color( 0.45098, 0.470588, 0.145098, 1 )
+
+[node name="grass" type="Spatial"]
+
+[node name="CSGPolygon" type="CSGPolygon" parent="."]
+transform = Transform( 0.934557, 0.355814, 0, -0.355814, 0.934557, 0, 0, 0, 1, 0, -0.108956, 0.391181 )
+polygon = PoolVector2Array( 0, 0, 0, 0, 0, 2, 0.5, 0 )
+mode = 1
+spin_degrees = 360.0
+spin_sides = 3
+material = SubResource( 1 )
+
+[node name="CSGPolygon2" type="CSGPolygon" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.945606, 0.325314, 0, -0.325314, 0.945606, 0, -0.108956, -0.760223 )
+polygon = PoolVector2Array( 0, 0, 0, 0, 0, 2, 0.5, 0 )
+mode = 1
+spin_degrees = 360.0
+spin_sides = 3
+material = SubResource( 1 )
+
+[node name="CSGPolygon3" type="CSGPolygon" parent="."]
+transform = Transform( -0.9338, -0.355525, -0.0402498, -0.355814, 0.934557, 0, 0.0376165, 0.0143217, -0.999189, -0.954598, -0.108956, 0.0438775 )
+polygon = PoolVector2Array( 0, 0, 0, 0, 0, 2, 0.5, 0 )
+mode = 1
+spin_degrees = 360.0
+spin_sides = 3
+material = SubResource( 1 )

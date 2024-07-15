@@ -1,0 +1,100 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://script/point_target.gd" type="Script" id=1]
+[ext_resource path="res://models/environment/point/cheking.tscn" type="PackedScene" id=2]
+[ext_resource path="res://script/rotate.gd" type="Script" id=3]
+[ext_resource path="res://models/environment/point/gas/H.tscn" type="PackedScene" id=4]
+[ext_resource path="res://models/environment/point/gas/He.tscn" type="PackedScene" id=5]
+[ext_resource path="res://models/environment/point/gas/Ne.tscn" type="PackedScene" id=6]
+[ext_resource path="res://models/environment/point/gas/Ar.tscn" type="PackedScene" id=7]
+[ext_resource path="res://models/environment/point/solido/Na.tscn" type="PackedScene" id=8]
+[ext_resource path="res://models/environment/point/solido/Li.tscn" type="PackedScene" id=9]
+[ext_resource path="res://models/environment/point/solido/Mg.tscn" type="PackedScene" id=10]
+[ext_resource path="res://models/environment/point/solido/K.tscn" type="PackedScene" id=11]
+[ext_resource path="res://models/environment/point/solido/Ca.tscn" type="PackedScene" id=12]
+[ext_resource path="res://models/environment/point/solido/Ag.tscn" type="PackedScene" id=13]
+[ext_resource path="res://models/environment/point/solido/Au.tscn" type="PackedScene" id=14]
+[ext_resource path="res://models/environment/point/solido/Al.tscn" type="PackedScene" id=15]
+[ext_resource path="res://models/environment/point/solido/C.tscn" type="PackedScene" id=16]
+[ext_resource path="res://models/environment/point/solido/Fe.tscn" type="PackedScene" id=17]
+
+[sub_resource type="SpatialMaterial" id=1]
+flags_transparent = true
+flags_unshaded = true
+albedo_color = Color( 0, 0.835294, 1, 0.215686 )
+
+[sub_resource type="SpatialMaterial" id=2]
+albedo_color = Color( 0.968627, 1, 0, 1 )
+
+[node name="point_target" type="Spatial"]
+script = ExtResource( 1 )
+cheking = ExtResource( 2 )
+element_Ag = NodePath("rotate/solido/Ag")
+element_Al = NodePath("rotate/solido/Al")
+element_Ar = NodePath("rotate/gas/Ar")
+element_Au = NodePath("rotate/solido/Au")
+element_C = NodePath("rotate/solido/C")
+element_Ca = NodePath("rotate/solido/Ca")
+element_Fe = NodePath("rotate/solido/Fe")
+element_H = NodePath("rotate/gas/H")
+element_He = NodePath("rotate/gas/He")
+element_K = NodePath("rotate/solido/K")
+element_Li = NodePath("rotate/solido/Li")
+element_Mg = NodePath("rotate/solido/Mg")
+element_Na = NodePath("rotate/solido/Na")
+element_Ne = NodePath("rotate/gas/Ne")
+element_generico = NodePath("rotate/generico")
+
+[node name="CSGTorus" type="CSGTorus" parent="."]
+inner_radius = 1.7
+outer_radius = 2.5
+sides = 64
+ring_sides = 3
+material = SubResource( 1 )
+
+[node name="rotate" type="Spatial" parent="."]
+script = ExtResource( 3 )
+
+[node name="gas" type="Spatial" parent="rotate"]
+
+[node name="H" parent="rotate/gas" instance=ExtResource( 4 )]
+
+[node name="He" parent="rotate/gas" instance=ExtResource( 5 )]
+
+[node name="Ne" parent="rotate/gas" instance=ExtResource( 6 )]
+
+[node name="Ar" parent="rotate/gas" instance=ExtResource( 7 )]
+
+[node name="liquido" type="Spatial" parent="rotate"]
+
+[node name="solido" type="Spatial" parent="rotate"]
+editor/display_folded = true
+
+[node name="Na" parent="rotate/solido" instance=ExtResource( 8 )]
+
+[node name="Li" parent="rotate/solido" instance=ExtResource( 9 )]
+
+[node name="Mg" parent="rotate/solido" instance=ExtResource( 10 )]
+
+[node name="K" parent="rotate/solido" instance=ExtResource( 11 )]
+
+[node name="Ca" parent="rotate/solido" instance=ExtResource( 12 )]
+
+[node name="Ag" parent="rotate/solido" instance=ExtResource( 13 )]
+
+[node name="Au" parent="rotate/solido" instance=ExtResource( 14 )]
+
+[node name="Al" parent="rotate/solido" instance=ExtResource( 15 )]
+
+[node name="C" parent="rotate/solido" instance=ExtResource( 16 )]
+
+[node name="Fe" parent="rotate/solido" instance=ExtResource( 17 )]
+
+[node name="generico" type="Spatial" parent="rotate"]
+editor/display_folded = true
+
+[node name="CSGCylinder" type="CSGCylinder" parent="rotate/generico"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-008, -1, 0, 1, -4.37114e-008, 0, 2, 0 )
+height = 0.2
+sides = 32
+material = SubResource( 2 )

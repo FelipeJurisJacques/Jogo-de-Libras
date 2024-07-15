@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://models/map/environment/small.tscn" type="PackedScene" id=1]
+[ext_resource path="res://models/map/environment/small2.tscn" type="PackedScene" id=2]
+[ext_resource path="res://models/map/rock/rock.tscn" type="PackedScene" id=3]
+[ext_resource path="res://models/map/environment/small4.tscn" type="PackedScene" id=4]
+
+[node name="big" type="Spatial"]
+
+[node name="small2" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.477846, 0, -0.878444, 0, 1, 0, 0.878444, 0, 0.477846, 15.1078, 0, -23.9402 )
+
+[node name="small3" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.598747, 0, -0.800938, 0, 1, 0, 0.800938, 0, 0.598747, -25.0381, 0, 26.636 )
+
+[node name="rock" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16.5561, 0, -26.236 )
+
+[node name="small" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 31.0333, 0, 34.9547 )
+
+[node name="small4" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -35.5039, 0, -20.6565 )

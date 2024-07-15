@@ -1,0 +1,25 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://script/element.gd" type="Script" id=1]
+[ext_resource path="res://models/environment/point/gas/gas.obj" type="ArrayMesh" id=2]
+[ext_resource path="res://models/environment/point/gas/texture/Ar.bmp" type="Texture" id=3]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_texture = ExtResource( 3 )
+
+[sub_resource type="SpatialMaterial" id=2]
+albedo_color = Color( 0.380392, 0.380392, 0.380392, 1 )
+
+[sub_resource type="SpatialMaterial" id=3]
+albedo_color = Color( 0.768627, 0.192157, 0.0941176, 1 )
+
+[node name="Ar" type="Spatial"]
+script = ExtResource( 1 )
+elemento = "Ar"
+
+[node name="gas" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.766044, -0.642788, 0, 0.642788, 0.766044, 0, 2, 0 )
+mesh = ExtResource( 2 )
+material/0 = SubResource( 1 )
+material/1 = SubResource( 2 )
+material/2 = SubResource( 3 )

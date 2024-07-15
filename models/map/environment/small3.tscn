@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://models/map/grass/grass.tscn" type="PackedScene" id=1]
+[ext_resource path="res://models/map/rock/rock2.tscn" type="PackedScene" id=2]
+
+[node name="small" type="Spatial"]
+
+[node name="grass" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.73872, -0.0748136, -3.45631 )
+
+[node name="grass2" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.42369, -0.0748136, 2.11275 )
+
+[node name="rock2" parent="." instance=ExtResource( 2 )]

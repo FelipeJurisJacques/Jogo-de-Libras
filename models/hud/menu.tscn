@@ -1,0 +1,94 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://script/menu.gd" type="Script" id=1]
+[ext_resource path="res://icon/dirigir.png" type="Texture" id=2]
+[ext_resource path="res://icon/combate.png" type="Texture" id=3]
+[ext_resource path="res://icon/jogar.png" type="Texture" id=4]
+[ext_resource path="res://script/tutorial.gd" type="Script" id=5]
+[ext_resource path="res://video/tutorial/pilotar.ogv" type="VideoStream" id=6]
+[ext_resource path="res://video/tutorial/combate.ogv" type="VideoStream" id=7]
+[ext_resource path="res://video/tutorial/jogar.ogv" type="VideoStream" id=8]
+[ext_resource path="res://video/quimica/prata.ogv" type="VideoStream" id=9]
+[ext_resource path="res://video/quimica/aluminio.ogv" type="VideoStream" id=10]
+[ext_resource path="res://video/quimica/argonio.ogv" type="VideoStream" id=11]
+[ext_resource path="res://video/quimica/ouro.ogv" type="VideoStream" id=12]
+[ext_resource path="res://video/quimica/carbono.ogv" type="VideoStream" id=13]
+[ext_resource path="res://video/quimica/calcio.ogv" type="VideoStream" id=14]
+[ext_resource path="res://video/quimica/helio.ogv" type="VideoStream" id=15]
+[ext_resource path="res://video/quimica/potassio.ogv" type="VideoStream" id=16]
+[ext_resource path="res://video/quimica/magnesio.ogv" type="VideoStream" id=17]
+[ext_resource path="res://video/quimica/neonio.ogv" type="VideoStream" id=18]
+[ext_resource path="res://icon/voltar.png" type="Texture" id=19]
+[ext_resource path="res://models/hud/texture/mold2.png" type="Texture" id=20]
+
+[node name="Menu" type="Node2D"]
+pause_mode = 2
+script = ExtResource( 1 )
+menu_itens = NodePath("itens")
+menu_tutorial = NodePath("tutorial")
+menu_videoplayer = NodePath("tutorial/VideoPlayer")
+
+[node name="itens" type="Node2D" parent="."]
+
+[node name="dirigir" type="Button" parent="itens"]
+margin_left = 480.0
+margin_top = 40.0
+margin_right = 680.0
+margin_bottom = 174.0
+text = "dirigir"
+icon = ExtResource( 2 )
+
+[node name="combate" type="Button" parent="itens"]
+margin_left = 300.0
+margin_top = 170.0
+margin_right = 498.0
+margin_bottom = 304.0
+text = "combate"
+icon = ExtResource( 3 )
+
+[node name="jogar" type="Button" parent="itens"]
+margin_left = 100.0
+margin_top = 300.0
+margin_right = 316.0
+margin_bottom = 434.0
+text = "jogar"
+icon = ExtResource( 4 )
+
+[node name="tutorial" type="Node2D" parent="."]
+script = ExtResource( 5 )
+videoplayer = NodePath("VideoPlayer")
+clip_tutorial1 = ExtResource( 6 )
+clip_tutorial2 = ExtResource( 7 )
+clip_tutorial3 = ExtResource( 8 )
+clip_Ag = ExtResource( 9 )
+clip_Al = ExtResource( 10 )
+clip_Ar = ExtResource( 11 )
+clip_Au = ExtResource( 12 )
+clip_C = ExtResource( 13 )
+clip_Ca = ExtResource( 14 )
+clip_He = ExtResource( 15 )
+clip_K = ExtResource( 16 )
+clip_Mg = ExtResource( 17 )
+clip_Ne = ExtResource( 18 )
+
+[node name="voltar" type="Button" parent="tutorial"]
+margin_left = 30.0
+margin_top = 30.0
+margin_right = 12.0
+margin_bottom = 20.0
+icon = ExtResource( 19 )
+
+[node name="VideoPlayer" type="VideoPlayer" parent="tutorial"]
+margin_left = 170.0
+margin_top = 100.0
+margin_right = 770.0
+margin_bottom = 500.0
+
+[node name="mold2" type="Sprite" parent="tutorial"]
+position = Vector2( 469.241, 306.352 )
+scale = Vector2( 0.85094, 0.7256 )
+texture = ExtResource( 20 )
+[connection signal="pressed" from="itens/dirigir" to="." method="_on_dirigir_pressed"]
+[connection signal="pressed" from="itens/combate" to="." method="_on_combate_pressed"]
+[connection signal="pressed" from="itens/jogar" to="." method="_on_jogar_pressed"]
+[connection signal="pressed" from="tutorial/voltar" to="." method="_on_voltar_pressed"]

@@ -1,0 +1,127 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://script/car_ia.gd" type="Script" id=1]
+[ext_resource path="res://models/vehicle/car/wheel.obj" type="ArrayMesh" id=2]
+[ext_resource path="res://models/vehicle/car/car.obj" type="ArrayMesh" id=3]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 1.3, 0.4, 2.15 )
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 1, 0.4, 1.2 )
+
+[sub_resource type="SpatialMaterial" id=3]
+albedo_color = Color( 1, 0, 0, 1 )
+
+[node name="car" type="VehicleBody"]
+pause_mode = 1
+mass = 89.83
+script = ExtResource( 1 )
+target = NodePath("target")
+MAX_ENGINE_FORCE = 300.0
+MAX_BRAKE_FORCE = 200.0
+MAX_STEER_ANGLE = 0.7
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0.05 )
+shape = SubResource( 1 )
+
+[node name="fl" type="VehicleWheel" parent="."]
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3, 0.2, 1.6 )
+use_as_steering = true
+wheel_roll_influence = 0.4
+wheel_radius = 0.6
+wheel_friction_slip = 1.0
+suspension_travel = 2.0
+suspension_stiffness = 40.0
+damping_compression = 0.88
+
+[node name="wheel" type="MeshInstance" parent="fl"]
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+material/2 = null
+
+[node name="rl" type="VehicleWheel" parent="."]
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3, 0.2, -1.6 )
+use_as_traction = true
+wheel_roll_influence = 0.4
+wheel_radius = 0.6
+wheel_friction_slip = 1.0
+suspension_travel = 2.0
+suspension_stiffness = 40.0
+damping_compression = 0.88
+
+[node name="wheel" type="MeshInstance" parent="rl"]
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+material/2 = null
+
+[node name="fr" type="VehicleWheel" parent="."]
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3, 0.2, 1.6 )
+use_as_steering = true
+wheel_roll_influence = 0.4
+wheel_radius = 0.6
+wheel_friction_slip = 1.0
+suspension_travel = 2.0
+suspension_stiffness = 40.0
+damping_compression = 0.88
+
+[node name="wheel" type="MeshInstance" parent="fr"]
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+material/2 = null
+
+[node name="rr" type="VehicleWheel" parent="."]
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3, 0.2, -1.6 )
+use_as_traction = true
+wheel_roll_influence = 0.4
+wheel_radius = 0.6
+wheel_friction_slip = 1.0
+suspension_travel = 2.0
+suspension_stiffness = 40.0
+damping_compression = 0.88
+
+[node name="wheel" type="MeshInstance" parent="rr"]
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+material/2 = null
+
+[node name="CollisionShape2" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4, 0 )
+shape = SubResource( 2 )
+
+[node name="SpotLight" type="SpotLight" parent="."]
+transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, -0.399825, 1.63983, 0.623356 )
+spot_angle = 25.3125
+
+[node name="SpotLight2" type="SpotLight" parent="."]
+transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, 0.4, 1.63956, 0.623 )
+spot_angle = 25.3125
+
+[node name="SpotLight3" type="SpotLight" parent="."]
+transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, 0.46, 0.722117, 2.31825 )
+spot_angle = 25.3125
+
+[node name="SpotLight4" type="SpotLight" parent="."]
+transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, -0.46, 0.722117, 2.31825 )
+spot_angle = 25.3125
+
+[node name="car" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+mesh = ExtResource( 3 )
+material/0 = null
+material/1 = null
+material/2 = SubResource( 3 )
+material/3 = null
+material/4 = null
+material/5 = null
+
+[node name="target" type="Spatial" parent="."]

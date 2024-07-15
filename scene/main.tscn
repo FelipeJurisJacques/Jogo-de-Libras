@@ -1,0 +1,89 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://script/main.gd" type="Script" id=1]
+[ext_resource path="res://models/map/cene.tscn" type="PackedScene" id=2]
+[ext_resource path="res://models/vehicle/car.tscn" type="PackedScene" id=3]
+[ext_resource path="res://models/vehicle/opponent.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scene/camera.tscn" type="PackedScene" id=5]
+[ext_resource path="res://models/environment/point/point_target.tscn" type="PackedScene" id=6]
+[ext_resource path="res://models/hud/mensage.tscn" type="PackedScene" id=7]
+[ext_resource path="res://models/hud/menu.tscn" type="PackedScene" id=8]
+
+[sub_resource type="ProceduralSky" id=1]
+
+[sub_resource type="Environment" id=2]
+background_mode = 2
+background_sky = SubResource( 1 )
+background_sky_custom_fov = 90.0
+ambient_light_energy = 0.0
+fog_enabled = true
+fog_color = Color( 0, 0.764706, 1, 1 )
+fog_depth_begin = 0.0
+fog_depth_end = 400.0
+dof_blur_far_enabled = true
+dof_blur_far_distance = 200.0
+dof_blur_far_transition = 50.0
+dof_blur_far_amount = 0.07
+dof_blur_far_quality = 0
+dof_blur_near_distance = 1679.71
+glow_intensity = 0.0
+adjustment_enabled = true
+
+[node name="main" type="Spatial"]
+pause_mode = 2
+script = ExtResource( 1 )
+arena = NodePath("arena")
+main_menu = NodePath("Menu")
+main_mensage = NodePath("Mensage")
+player = NodePath("arena/car")
+mission_target = NodePath("arena/point_target")
+
+[node name="arena" type="Node" parent="."]
+
+[node name="DirectionalLight" type="DirectionalLight" parent="arena"]
+transform = Transform( -0.977903, 2.25864e-07, 0.209057, 0.172397, 0.565659, 0.806417, -0.118255, 0.824639, -0.55316, 0, 13.1674, 0 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="arena"]
+environment = SubResource( 2 )
+
+[node name="cene" parent="arena" instance=ExtResource( 2 )]
+
+[node name="car" parent="arena" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.819, 0.5, 9.328 )
+MAX_BRAKE_FORCE = 200.0
+
+[node name="car2" parent="arena" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 175.74, 0.945659, -13.0478 )
+follow = NodePath("../car")
+
+[node name="car3" parent="arena" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20.6704, 0.945659, -260.337 )
+follow = NodePath("../car")
+
+[node name="car4" parent="arena" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -24.9955, 0.945659, 108.365 )
+follow = NodePath("../car")
+
+[node name="car5" parent="arena" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -148.102, 0.945659, -8.60986 )
+follow = NodePath("../car")
+
+[node name="car6" parent="arena" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -127.743, 1, 178.267 )
+follow = NodePath("../car")
+
+[node name="car7" parent="arena" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 243.421, 2, -164.834 )
+follow = NodePath("../car")
+
+[node name="camera" parent="arena" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.8826, 0.492851, 11.3973 )
+follow_this_path = NodePath("../car")
+goal = NodePath("../point_target")
+
+[node name="point_target" parent="arena" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 221.303, 0, 94.7919 )
+
+[node name="Mensage" parent="." instance=ExtResource( 7 )]
+
+[node name="Menu" parent="." instance=ExtResource( 8 )]

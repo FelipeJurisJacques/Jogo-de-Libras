@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://script/element.gd" type="Script" id=1]
+[ext_resource path="res://video/quimica/magnesio.ogv" type="VideoStream" id=2]
+[ext_resource path="res://models/environment/point/solido/texture/Li.bmp" type="Texture" id=3]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_texture = ExtResource( 3 )
+
+[node name="Li" type="Spatial"]
+script = ExtResource( 1 )
+elemento = "Li"
+clip = ExtResource( 2 )
+
+[node name="CSGPolygon" type="CSGPolygon" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 1 )
+polygon = PoolVector2Array( -0.8, 0, -0.5, 0.7, 0.5, 0.7, 0.8, 0 )
+depth = 2.0
+material = SubResource( 1 )
